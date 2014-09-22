@@ -3,7 +3,7 @@
 
     function PostDAO($resource) {
         var api = $resource('/api/post', null, {
-
+          get: {method: 'GET'}
         });
         return {
             query: function () {
