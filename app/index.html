@@ -16,10 +16,12 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <th></th>
-            <th></th>
-            <th></th>
+        <tr ng-repeat="post in blogPosts.posts">
+            <th>{{post.id}}</th>
+            <th>{{post.name}}</th>
+            <th><span ng-repeat="pet in post.pets">
+                {{pet}}<span ng-hide="$last">, </span>
+              </span></th>
         </tr>
         </tbody>
     </table>
