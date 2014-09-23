@@ -5,9 +5,11 @@
 
         ctrl.list = {
             selectRefreshment: {value: ''},
-            selectZone: {value: ''}
+            selectZone: {value: ''},
+            date: new Date(),
+            comments: ''
         };
-
+        
         ctrl.refreshments = [
             {value: 1, status: 'yes'},
             {value: 2, status: 'no'}
@@ -22,13 +24,13 @@
         ];
 
         ctrl.isSummary = false;
-        this.showSummary = function () {
+        ctrl.showSummary = function () {
             ctrl.isSummary = !ctrl.isSummary;
         };
 
         ctrl.formData = {};
-
-        this.save = function(){
+        
+        ctrl.save = function(){
             ctrl.formData = {
                 firstName: ctrl.list.firstName,
                 lastName: ctrl.list.lastName,
@@ -39,7 +41,10 @@
                 date: ctrl.list.date,
                 comments: ctrl.list.comments
             };
-        }
+        };
+        $scope.$watch(function(){ return ctrl.list;}, function(oldVal, newVal) {
+          ctrl.save();
+        }, true);
     }
 
     var module = angular.module('exerciseApp', ["xeditable"]);

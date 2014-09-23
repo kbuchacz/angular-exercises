@@ -6,3 +6,4 @@ target
 #IntelliJ Idea
 .idea
 *.iml
+/nbproject/
