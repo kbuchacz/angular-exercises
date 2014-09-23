@@ -6,7 +6,24 @@
     module.config(function ($provide, $routeProvider)
     {
         $provide.decorator('$httpBackend', angular.mock.e2e.$httpBackendDecorator);
-
+        $routeProvider.when('/', {
+          templateUrl: 'brainCandyList.html',
+          controller: 'BrainCandyListCtrl',
+          controllerAs: 'list'
+        })
+        .when('/details/:id', {
+          templateUrl: 'brainCandyDetails.html',
+          controller: 'BrainCandyDetailsCtrl',
+          controllerAs: 'd'
+        })
+        .when('/add', {
+          templateUrl: 'brainCandyDetails.html',
+          controller: 'BrainCandyDetailsCtrl',
+          controllerAs: 'd'
+        })
+        .otherwise({
+          redirectTo: '/'
+        });
     });
 
     module.run(function ($httpBackend)

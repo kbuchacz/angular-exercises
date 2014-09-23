@@ -1,0 +1,25 @@
+<table class="table">
+  <thead>
+    <tr class="row">
+      <th class="col-sm-1">ID</th>
+      <th class="col-sm-2">Name</th>
+      <th class="col-sm-2">Factory</th>
+      <th class="col-sm-1 col-xs-1"></th>
+      <th class="col-sm-1 col-xs-1"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="row" ng-repeat="candy in list.details">
+      <td>{{candy.id}}</td>
+      <td>{{candy.name}}</td>
+      <td>{{candy.factory}}</td>
+      <td><a class="btn btn-primary btn-sm" href="#details/{{candy.id}}">Edit</a></td>
+      <td><button class="btn btn-primary btn-sm" ng-click="list.deleteCandy(candy.id)">Delete</button></td>
+    </tr>
+    <tr class="row">
+      <td colspan="5">
+        <a href="#add" class="btn btn-default btn-sm">Add new candy...</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
