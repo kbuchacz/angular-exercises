@@ -3,12 +3,14 @@
     <tr>
         <th>ID</th>
         <th>Name</th>
+        <th></th>
     </tr>
     </thead>
     <tbody>
     <tr ng-repeat="row in postList.posts">
         <th>{{row.id}}</th>
         <th>{{row.name}}</th>
+        <th><a href="#/details/{{row.id}}">Details</a></th>
     </tr>
     </tbody>
 </table>
