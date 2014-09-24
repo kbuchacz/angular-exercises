@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular.module('ngflowApp', ['ngRoute']).config(function ($routeProvider) {
+angular.module('ngflowApp', ['ngRoute', 'flow']).config(function ($routeProvider, flowFactoryProvider) {
     $routeProvider
       .when('/upload', {
         templateUrl: 'views/upload.html',

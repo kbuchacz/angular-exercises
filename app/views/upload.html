@@ -1,7 +1,10 @@
-<div>
+<div flow-init="{target: '/backend'}"
+     flow-files-submitted="upload.startUpload($flow, $flow.files)"
+     flow-file-success="$file.msg = $message"
+     flow-complete="upload.fileSuccess($file, $file.msg)">
     <h3>Files upload component</h3>
     <div class="form-group">
-        <button class="btn btn-primary" flow-btn>Select file</button>
+        <span class="btn btn-primary" flow-btn>Select file</span>
     </div>
 
     <p ng-show="upload.flowCompleteFlag" class="alert alert-success">All files uploaded successfully</p>
@@ -22,7 +25,7 @@
             <td>{{file.name}}</td>
             <td>{{file.size}} b</td>
             <td>{{file.progress()}}</td>
-            <td><img style="width:120px;" flow-img="file" /></td>
+            <td><img style="width:120px;" flow-img="upload.showImage(file)" /></td>
         </tr>
     </table>
 
