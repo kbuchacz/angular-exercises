@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: en\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 1.6.9\n"
+"Language: en\n"
+
+#: app/index.html
+msgid ""
+"Jak co roku na zakończenie wakacji wrocławski Ogród Botaniczny wypełni się "
+"aromatami i zapachami\n"
+"        świeżych\n"
+"        bułek, rogalików, chlebów i domowych ciast. Dodatkowo na stoisku "
+"Hotelu Tumskiego będziecie mogli Państwo\n"
+"        spróbować\n"
+"        doskonałych wyrobów z grilla, które we wczesno jesiennym słońcu "
+"smakować będą znakomicie! Na Święcie Mąki swoje\n"
+"        stoiska wystawią także producenci miodów, zielarze oraz - "
+"oczywiście..."
+msgstr ""
+"As every year at the end of the holiday Wroclaw Botanical Garden is filled "
+"with aromas and scents of fresh bread rolls, croissants, breads and homemade "
+"cakes. In addition to the stand Tumski Hotel will be able to sample the "
+"excellent products from the grill, which in the early autumn sun will taste "
+"great! On the Feast Flour your stand will put the honey producers, "
+"herbalists and - of course -..."
+
+#: app/index.html
+msgid "Wrocławskie Święto Mąki"
+msgstr "Wroclaw Flour Festival"
+
+#: app/TranslateCtrl.js
+msgid "angielski"
+msgstr "english"
+
+#: app/TranslateCtrl.js
+msgid "niemiecki"
+msgstr "german"
+
+#: app/TranslateCtrl.js
+msgid "polski"
+msgstr "polish"

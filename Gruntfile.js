@@ -53,7 +53,7 @@ module.exports = function (grunt) {
                     endDelim: ']]'
                 },
                 files: {
-                    'po/pl.pot': ['app/*.html']
+                    'po/pl.pot': ['app/*.html', 'app/*.js']
                 }
             }
         },
@@ -77,4 +77,6 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('default', ['serve']);
+	grunt.registerTask('extract', ['nggettext_extract']);
+    grunt.registerTask('compile', ['nggettext_compile']);
 };

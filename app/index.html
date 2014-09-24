@@ -12,13 +12,13 @@
             <div class="col-xs-12 col-md-12 col-lg-8"><h1 translate>Wrocławskie Święto Mąki</h1></div>
             <div class="col-xs-12 col-md-12 col-lg-4 text-right">
                 <div class="btn-group">
-                <button class="btn btn-primary" ng-repeat="lang in translate.languages" >{{lang.name}}</button>
+                  <button class="btn btn-primary" ng-repeat="lang in translate.languages" ng-click="translate.setLanguage(lang.value)">{{lang.name |translate}}</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <p>Jak co roku na zakończenie wakacji wrocławski Ogród Botaniczny wypełni się aromatami i zapachami
+    <p translate>Jak co roku na zakończenie wakacji wrocławski Ogród Botaniczny wypełni się aromatami i zapachami
         świeżych
         bułek, rogalików, chlebów i domowych ciast. Dodatkowo na stoisku Hotelu Tumskiego będziecie mogli Państwo
         spróbować
@@ -29,6 +29,8 @@
 
 
 <script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-gettext/dist/angular-gettext.js"></script>
 <script src="TranslateCtrl.js"></script>
+<script src="translations.js"></script>
 </body>
 </html>

@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: app/index.html
+msgid ""
+"Jak co roku na zakończenie wakacji wrocławski Ogród Botaniczny wypełni się aromatami i zapachami\r\n"
+"        świeżych\r\n"
+"        bułek, rogalików, chlebów i domowych ciast. Dodatkowo na stoisku Hotelu Tumskiego będziecie mogli Państwo\r\n"
+"        spróbować\r\n"
+"        doskonałych wyrobów z grilla, które we wczesno jesiennym słońcu smakować będą znakomicie! Na Święcie Mąki swoje\r\n"
+"        stoiska wystawią także producenci miodów, zielarze oraz - oczywiście..."
+msgstr ""
+
+#: app/index.html
+msgid "Wrocławskie Święto Mąki"
+msgstr ""
+
+#: app/TranslateCtrl.js
+msgid "angielski"
+msgstr ""
+
+#: app/TranslateCtrl.js
+msgid "niemiecki"
+msgstr ""
+
+#: app/TranslateCtrl.js
+msgid "polski"
+msgstr ""
