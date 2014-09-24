@@ -59,5 +59,5 @@ angular.module('itcApp').factory('ContactDAO', function ($q) {
             var promise=deferred.promise;
             return promise;
         }
-    }
+    };
 });
