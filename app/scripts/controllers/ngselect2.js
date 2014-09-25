@@ -8,15 +8,32 @@
  * Controller of the ngselect2App
  */
 angular.module('ngselect2App').controller('Ngselect2Ctrl', function ($scope, $resource, Artist) {
+    var ctrlScope = this;
+    this.counter = 1;
+    this.artists = {results: []};
+    console.log(this.time);
 
-    this.artists = [];
-    this.artistModel = [];
+    this.search=function (query) {
+        Artist.get(query.term).then(function(data) {
+            var length = data.artist.length;
+            ctrlScope.artists.results = [];
 
-    this.search=function () {
-        // recive argument/s and code function body
-    }
+            for(var i = 0; i < length; i++) {
+                ctrlScope.artists.results.push({id: 'sd' + (ctrlScope.counter++),
+                              text: data.artist[i].name});
+            }
+            console.log(ctrlScope.artists);
+            query.callback(ctrlScope.artists);
+        });
+    };
 
-    // fill with 4 items below
-    this.select2options = {}
+    this.select2options = {
+        multiple: true,
+        minimumInputLength: 1,
+        maximumSelectionSize: 10,
+        query: function(query) {
+            ctrlScope.search(query);
+        }
+    };
 
 });
