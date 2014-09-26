@@ -4,8 +4,21 @@
         var ctrl = this;
 
         this.addProduct = function() {
-            ProductDAO.add(ctrl.details);
-            $location.path('/');
+            var exp = /\$?(\d+\.?\d*)/.exec(this.details.price),
+                value;
+            if(exp != null) {
+                console.log(exp);
+                exp[1].search('.') !== -1 ?
+                    value = parseFloat(exp[1]) :
+                    value = parseInt(exp[1]);
+
+                this.details.price = value;
+                ProductDAO.add(ctrl.details);
+                $location.path('/');
+            }
+            else {
+                alert('Price must be a number!');
+            }
         }
     }
 
