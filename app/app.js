@@ -1,7 +1,7 @@
 (function ()
 {
     'use strict';
-    var module = angular.module("exerciseApp", ['ngResource', 'ngRoute']);
+    var module = angular.module("exerciseApp", ['ngResource', 'ngRoute', 'ui.bootstrap']);
 
     module.config(function ($provide, $routeProvider)
     {
@@ -77,31 +77,31 @@
             return result;
         }
 
-//        $httpBackend.whenGET(/\/api\/post(\?.*)$/).respond(function (method, url)
-//        {
-//            var params = parseQueryString(url);
-//            var first = parseInt(params.firstResult);
-//            var max = parseInt(params.maxResults);
-//
-//            var count = 0;
-//            var result = [];
-//            for (var i in posts) {
-//                if (posts.hasOwnProperty(i) && ((-1<posts[i].name.indexOf(params.searchQuery) || !params.searchQuery) || (-1<posts[i].pets.indexOf(params.searchQuery) || !params.searchQuery)))
-//                {
-//                    if ((count>=first) && (count<first+max))
-//                    {
-//                        result.push(posts[i]);
-//                    }
-//                    count++;
-//                }
-//            }
-//            return [200, {resultList: result, totalCount: count}];
-//        });
-
-        $httpBackend.whenGET('/api/post').respond(function ()
+        $httpBackend.whenGET(/\/api\/post(\?.*)$/).respond(function (method, url)
         {
-            return [200, posts];
+            var params = parseQueryString(url);
+            var first = parseInt(params.firstResult);
+            var max = parseInt(params.maxResults);
+
+            var count = 0;
+            var result = [];
+            for (var i in posts) {
+                if (posts.hasOwnProperty(i) && ((-1<posts[i].name.indexOf(params.searchQuery) || !params.searchQuery) || (-1<posts[i].pets.indexOf(params.searchQuery) || !params.searchQuery)))
+                {
+                    if ((count>=first) && (count<first+max))
+                    {
+                        result.push(posts[i]);
+                    }
+                    count++;
+                }
+            }
+            return [200, {resultList: result, totalCount: count}];
         });
+
+//        $httpBackend.whenGET('/api/post').respond(function ()
+//        {
+//            return [200, posts];
+//        });
 
         $httpBackend.whenPOST(/\/api\/post/).respond(function (method, url, postData)
         {
